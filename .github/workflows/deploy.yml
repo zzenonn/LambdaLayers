@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CI for Lambda Layers
 
 # Controls when the action will run. 
 on:
@@ -48,3 +48,4 @@ jobs:
           name: LambdaLayers
           # The path or URL to the CloudFormation template (implicitly includes the workspace)
           template: ./packaged.yaml
+          capabilities: CAPABILITY_AUTO_EXPAND
