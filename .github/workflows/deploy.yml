@@ -24,14 +24,19 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Info
-        run: echo "Building Lambda Layers"
+      
+      - name: Configure AWS credentials from Test account
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-southeast-1
 
       # Runs a set of commands using the runners shell
       - name: Build and Deploy Lambda Layers
+        env: 
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
         run: |
           chmod +x "${GITHUB_WORKSPACE}/builld-layers.sh"
           # run script
-          "${GITHUB_WORKSPACE}/builld-layers.sh"
+          "${GITHUB_WORKSPACE}/builld-layers.sh $S3_BUCKET"
