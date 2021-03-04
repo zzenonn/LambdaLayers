@@ -40,6 +40,6 @@ jobs:
           S3_BUCKET: ${{ secrets.S3_BUCKET }}
         run: |
           ls -l
-          chmod +x "${GITHUB_WORKSPACE}/builld-layers.sh"
+          chmod +x "${GITHUB_WORKSPACE}/build-layers.sh"
           # run script
-          "${GITHUB_WORKSPACE}/builld-layers.sh $S3_BUCKET"
+          "${GITHUB_WORKSPACE}/build-layers.sh $S3_BUCKET"
