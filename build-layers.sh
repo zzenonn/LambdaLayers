@@ -19,6 +19,5 @@ pip3 install -t $layer/python/lib/python3.8/site-packages/ -r $layer/requirement
 
 done
 
-aws cloudformation package --template-file template.yaml --s3-bucket $bucket_name --s3-prefix layers > packaged.yaml
-aws s3 cp packaged.yaml s3://$bucket_name/layer-templates/layers.yaml
+aws cloudformation package --template-file template.yaml --s3-bucket $bucket_name --s3-prefix layers --output-template-file ./packaged.yaml
 # aws cloudformation deploy --stack-name LambdaLayers --template ./packaged.yaml
