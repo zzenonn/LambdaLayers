@@ -47,4 +47,4 @@ jobs:
           # The name of the CloudFormation stack
           name: LambdaLayers
           # The path or URL to the CloudFormation template (implicitly includes the workspace)
-          template: https://${{ secrets.S3_BUCKET }}.s3-ap-southeast-1.amazonaws.com/layer-templates/layers.yaml
+          template: ./packaged.yaml
