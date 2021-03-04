@@ -1,9 +1,9 @@
-AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: "AWS::Serverless-2016-10-31"
 Description: A template that creates the Lambda layers in this repo.
 Resources:
   Requests:
-    Type: AWS::Serverless::LayerVersion
+    Type: "AWS::Serverless::LayerVersion"
     Properties:
       LayerName: requests
       Description: Dependencies for the requests library.
