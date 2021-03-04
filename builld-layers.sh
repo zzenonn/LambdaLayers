@@ -15,7 +15,7 @@ for layer in ./python/* #$(ls ./python)
 do
 
 mkdir -p $layer/python/lib/python3.8/site-packages/
-pip3.8 install -t $layer/python/lib/python3.8/site-packages/ -r $layer/requirements.txt
+pip3 install -t $layer/python/lib/python3.8/site-packages/ -r $layer/requirements.txt
 
 done
 
