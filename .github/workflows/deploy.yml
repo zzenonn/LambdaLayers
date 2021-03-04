@@ -42,4 +42,4 @@ jobs:
           cd ${GITHUB_WORKSPACE}
           chmod +x "./build-layers.sh"
           # run script
-          sh ./build-layers.sh ${S3_BUCKET}
+          ./build-layers.sh ${S3_BUCKET}
