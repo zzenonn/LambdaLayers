@@ -21,4 +21,3 @@ done
 
 aws cloudformation package --template-file template.yaml --s3-bucket $bucket_name --s3-prefix layers > packaged.yaml
 aws cloudformation deploy --stack-name LambdaLayers --template ./packaged.yaml
-rm packaged.yaml
