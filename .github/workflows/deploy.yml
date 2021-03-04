@@ -42,7 +42,7 @@ jobs:
           # run script
           ./build-layers.sh ${S3_BUCKET}
       - name: Deploy Lambda Layers
-        uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
+        uses: aws-actions/aws-cloudformation-github-deploy@v1.0.4
         with:
           # The name of the CloudFormation stack
           name: LambdaLayers
