@@ -10,3 +10,12 @@ Resources:
       ContentUri: python/requests/.
       CompatibleRuntimes:
         - python3.8
+        
+  Xendit:
+    Type: "AWS::Serverless::LayerVersion"
+    Properties:
+      LayerName: xendit
+      Description: Dependencies for the xendit SDK.
+      ContentUri: python/xendit/.
+      CompatibleRuntimes:
+        - python3.8
