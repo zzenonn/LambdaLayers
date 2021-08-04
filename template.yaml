@@ -19,3 +19,12 @@ Resources:
       ContentUri: python/xendit/.
       CompatibleRuntimes:
         - python3.8
+        
+  Data:
+    Type: "AWS::Serverless::LayerVersion"
+    Properties:
+      LayerName: data
+      Description: Dependencies for some data tools.
+      ContentUri: python/data/.
+      CompatibleRuntimes:
+        - python3.8
