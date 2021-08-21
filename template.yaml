@@ -9,7 +9,7 @@ Resources:
       Description: Dependencies for the requests library.
       ContentUri: python/requests/.
       CompatibleRuntimes:
-        - python3.8
+        - python3.9
         
   Xendit:
     Type: "AWS::Serverless::LayerVersion"
@@ -18,7 +18,7 @@ Resources:
       Description: Dependencies for the xendit SDK.
       ContentUri: python/xendit/.
       CompatibleRuntimes:
-        - python3.8
+        - python3.9
         
   Data:
     Type: "AWS::Serverless::LayerVersion"
@@ -27,4 +27,4 @@ Resources:
       Description: Dependencies for some data tools.
       ContentUri: python/data/.
       CompatibleRuntimes:
-        - python3.8
+        - python3.9
