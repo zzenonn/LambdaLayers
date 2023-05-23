@@ -14,8 +14,8 @@ bucket_name=$1
 for layer in ./python/* #$(ls ./python)
 do
 
-mkdir -p $layer/python/lib/python3.8/site-packages/
-pip3 install -t $layer/python/lib/python3.8/site-packages/ -r $layer/requirements.txt
+mkdir -p $layer/python/lib/python3.10/site-packages/
+pip3 install -t $layer/python/lib/python3.10/site-packages/ -r $layer/requirements.txt
 
 done
 
