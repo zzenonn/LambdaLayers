@@ -28,3 +28,12 @@ Resources:
       ContentUri: python/data/.
       CompatibleRuntimes:
         - python3.8
+
+  Ytdlp:
+    Type: "AWS::Serverless::LayerVersion"
+    Properties:
+      LayerName: ytdlp
+      Description: Dependencies for youtube downloader.
+      ContentUri: python/ytdlp/.
+      CompatibleRuntimes:
+        - python3.10
